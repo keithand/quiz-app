@@ -1,0 +1,57 @@
+
+/***********RESET SIZES*************/
+
+h1, h2, h3, h4, h5 ,h6 {
+	margin:0;
+	padding: 0;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+body {
+	font-family: 'Bubbler One', sans-serif;
+	background-color: #EECD80;
+}
+
+#container {
+	margin: 0 auto;
+	padding: 20px;
+	width: 700px;
+	height: 400px;
+	background-color: #77AAEF;
+	color: #FBFFFF;
+}
+
+#quote {
+	text-align: center;
+	width: 500px;
+	padding: 10px;
+	margin:20px auto;
+	border: 1px solid #000;
+
+}
+
+#form {
+	margin: auto;
+	height:210px;
+	width: 370px;
+}
+
+#parishilton, #georgebush, #bartsimpson {
+	float: left;
+	height:200px;
+	margin: 10px;
+}
+
+#georgeradio {
+	margin-top: 13px;
+}
+
+footer {
+	margin: auto;
+	width: 150px;
+}
+
