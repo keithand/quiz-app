@@ -24,8 +24,15 @@ $(document).ready(function() {
 //////////////////////////////////////////
 //				NEW GAME		 		//
 //////////////////////////////////////////
+	
+	var introPrompt = function () { 
+		alert("Are you ready to play?");
+		if(true){
+			questionDisplay();
+		}
+	}
 
-
+	introPrompt();
 
 //////////////////////////////////////////
 //			QUESTION OBJECTS			//
@@ -45,14 +52,12 @@ $(document).ready(function() {
 //////////////////////////////////////////
 //			QUESTION DISPLAY			//
 //////////////////////////////////////////
+	
 
 	function questionDisplay (question){
-		$(title).text(this.questionNumber);
-	}
-
-	questionDisplay(questionFour);
-
-
+		$("#title").text(this.questionNumber);
+	
+	};
 
 
 $(parisradio).click(function(){
