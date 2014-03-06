@@ -20,7 +20,6 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 	width: 700px;
-	height: 400px;
 	background-color: #77AAEF;
 	color: #FBFFFF;
 }
@@ -42,7 +41,6 @@ body {
 
 #parishilton, #georgebush, #bartsimpson {
 	float: left;
-	height:200px;
 	margin: 10px;
 }
 

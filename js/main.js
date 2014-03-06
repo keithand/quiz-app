@@ -1,68 +1,58 @@
 $(document).ready(function() {
 	
-//////////////////////////////////////////
-//			GLOBAL VARIABLES			//
-//////////////////////////////////////////
+	// SET THE QUESTION DATA VARIABLE
 
-	var title = document.getElementById("title");
-	var quote = document.getElementById("quote");
-	
-	var parisradio = document.getElementById("parishilton");
-	var georgeradio = document.getElementById("georgebush");
-	var bartradio = document.getElementById("bartsimpson");
-
-	var previous = document.getElementById("pervious");
-	var next = document.getElementById("next");
-
-	var correct = function(){
-		$(title).text("You're Correct!");
-	}
-	var incorrect = function(){
-		$(title).text("You're incorrect.");
-	}
-
-//////////////////////////////////////////
-//				NEW GAME		 		//
-//////////////////////////////////////////
-	
-	var introPrompt = function () { 
-		alert("Are you ready to play?");
-		if(true){
-			questionDisplay();
+	var question = [{
+		num: "Question #1",
+		quote : "Aren't we forgetting the true meaning of Christmas: the birth of Santa.",
+		person : "Bart Simpson"
+		},
+		{
+		num: "Question #2",
+		quote : "I know how hard it is for you to put food on your family.",
+		person: "George Bush"
+		},
+		{
+		num: "Question #3",
+		quote: "They misunderestimated me.",
+		person : "George Bush"
+		},
+		{
+		num: "Question #4",
+		quote: "I don't think there's ever been anyone like me that's lasted. And I'm going to keep lasting.",
+		person : "Paris Hilton"
 		}
+	];
+
+	// ALERT FOR A NEW GAME TO START
+	// AND START FIRST QUESTION
+
+	var newGame = function  (){
+		alert("Are you ready to begin?");
+		$("#title").text(question[0].num);
+		$("#quote q").text(question[0].quote);
+		$("#bartradio").on('click', function(event){
+			alert("Correct!");
+		});
+		$("#parisradio, #georgeradio").on("click", function(event){
+			alert("Incorrect.");
+
+		});
+		return true
 	}
 
-	introPrompt();
+		newGame();
 
-//////////////////////////////////////////
-//			QUESTION OBJECTS			//
-//////////////////////////////////////////
+	// AFTER FIRST QUESTION, LOAD NEXT QUESTIONS
 
-	function question (questionNumber, correctPerson, quote) {
-		this.questionNumber = questionNumber;
-		this.correctPerson = correctPerson;
-		this.quote = quote;
-	}
-
-	var questionOne = new question ("Question #1", "Bart Simpson", "Aren't we forgetting the true meaning of Christmas: the birth of Santa.");
-	var questionTwo = new question ("Question #2", "George Bush", "I know how hard it is for you to put food on your family." );
-	var questionThree = new question ("Question #3", "George Bush", "They misunderestimated me." );
-	var questionFour = new question ("Question #4", "Paris Hilton", "I don't think there's ever been anyone like me that's lasted. And I'm going to keep lasting");
-
-//////////////////////////////////////////
-//			QUESTION DISPLAY			//
-//////////////////////////////////////////
-	
-
-	function questionDisplay (question){
-		$("#title").text(this.questionNumber);
-	
+	var nextQuestion = function (){
+		if(newGame === true){
+			alert("AHH@");
+		}
 	};
 
+	nextQuestion();
 
-$(parisradio).click(function(){
-	correct();
-});
 
 
 });
