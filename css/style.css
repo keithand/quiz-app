@@ -48,6 +48,11 @@ body {
 	margin-top: 13px;
 }
 
+#submit {
+	clear:left;
+	margin-left: 150px;
+}
+
 footer {
 	margin: auto;
 	width: 150px;
