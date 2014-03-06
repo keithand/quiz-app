@@ -24,29 +24,25 @@ $(document).ready(function() {
 		}
 	];
 
-	// ALERT FOR A NEW GAME TO START
 	// AND START QUESTION DISPLAY AND ANSWER
-
-	var r = $.Deferred();
 
 	var newGame = function  (event){
 		alert("Are you ready to begin?");
-		return r
 	}
 
 
-	var questionOne = function (){
+	var questionOne = function (event){
 
 		$("#title").text(question[0].num);
 		$("#quote q").text(question[0].quote);
 		$("#bartradio").on('click', function(event){
 			alert("Correct!");
-			$(this).preventDefault();
+			return true
 		});
 		$("#parisradio, #georgeradio").on("click", function(event){
 			alert("Incorrect.");
+		return true
 		});
-		return r
 	};
 
 	var questionTwo = function (){
@@ -55,11 +51,12 @@ $(document).ready(function() {
 	$("#quote q").text(question[1].quote);
 	$("#bartradio").on('click', function(event){
 		alert("Correct!");
+		return true
 	});
 	$("#parisradio, #georgeradio").on("click", function(event){
 		alert("Incorrect.");
+		return true
 	});
-	return r
 }
 
 	var questionThree = function (){
@@ -68,14 +65,23 @@ $(document).ready(function() {
 	$("#quote q").text(question[2].quote);
 	$("#georgeradio").on('click', function(event){
 		alert("Correct!");
+		return true
 	});
 	$("#parisradio, #bartradio").on("click", function(event){
 		alert("Incorrect.");
+		return true
 	});
-	return r
 }
-	questionOne();
-	questionTwo();
-	questionThree();
+	function questionSeries () {
+		questionOne();
+		if(questionOne === true){
+		questionTwo()
+	}; if (questionTwo === true) {
+		questionThree()
+	}
+
+}
+
+questionSeries();
 
 });
