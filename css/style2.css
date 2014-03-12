@@ -1,0 +1,129 @@
+
+/***********RESET SIZES*************/
+
+h1, h2, h3, h4, h5 ,h6, header, body {
+	margin:0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: #DAEBF0;
+	padding: 0;
+}
+
+#container {
+	margin-top: 0;
+	padding: 0;
+	background-color: #F0F0D3;
+	color: #000;
+	height: 100%;
+}
+
+header {
+	float:left;
+	width: 220px;
+	background-color: #C2D1B0; 
+	overflow: auto
+}
+
+h1 {
+	text-align: center;
+	padding: 10px 0;
+	background-color: #92AE9F;
+}
+
+#heading {
+	padding: 15px 0 20px 30px;
+	width:200px;
+	height: 70px;
+	float:left;
+}
+
+img {
+	margin: 5px 60px;
+	clear:both !important;
+	text-align: center;
+}
+
+#quote {
+	text-align: left;
+	font-size: 18px;
+	width: 500px;
+	padding: 10px;
+	border: 2px solid #000;
+	position: absolute;
+	top: 70px;
+	left: 250px;
+
+}
+
+section {
+	width:100%;
+	height: 100%;
+}
+
+
+.icons {
+	position: absolute;
+	top: 180px;
+	left: 250px;
+
+}
+
+#parishilton, #georgebush, #bartsimpson {
+	margin-top: 10px;
+}
+
+
+
+#submit {
+	position: absolute;
+	top:100px;
+	left: 0;
+	padding: 20px;
+	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	padding:5px 25px; /*add some padding to the inside of the button*/
+	background:#35b128; /*the colour of the button*/
+	border:1px solid #33842a; /*required or the default border for the browser will appear*/
+	/*give the button curved corners, alter the size as required*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	/*give the button a drop shadow*/
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	box-shadow: 0 0 4px rgba(0,0,0, .75);
+	/*style the text*/
+	color:#f3f3f3;
+	font-size:1.1em;
+}
+
+#submit:hover, #submit:focus {
+	background-color :#399630; /*make the background a little darker*/
+	/*reduce the drop shadow size to give a pushed button effect*/
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+#count {
+	position: absolute;
+	top: 5px;
+	left: 330px;
+}
+
+#count h4 {
+	width: 300px;
+	line-height: 30px;
+}
+
+footer {
+	margin: auto;
+	width: 150px;
+}
+

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Who Said It?</title>
 
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style2.css" />
 	<link href='http://fonts.googleapis.com/css?family=Iceland|Bubbler+One' rel='stylesheet' type='text/css'>
 
 
@@ -14,8 +14,26 @@
 
 	<header id="header">
 		<h1 id="title">Who Said It?</h1>
+	
+		<img src="images/parishilton.png" alt="Paris Hilton" />
+		
+		<div class="clear"></div>
+		
+		<img src="images/georgebush.png" alt="George Bush" />
+		
+		<div class="clear"></div>
+
+		<img src="images/bartsimpson.png" alt="Bart Simpson" />
+
+
 	</header>
 	<section>
+		
+		<h2 id="heading">
+			Question #<span id="quest_num"></span>
+		</h2>
+
+		<div class="clear"></div>
 		<div id="quote">
 			<q>I couldn't imagine somebody like Osama bin Laden understanding the joy of Hanukkah.
 			</q>
@@ -24,11 +42,7 @@
 			
 				<div id="parishilton">
 					
-					<img src="images/parishilton.png" alt="Paris Hilton" />
-					
-					<br>
-
-					<input type="radio" name="people" id="parisradio">
+					<input type="radio" name="people" id="parisradio" value="Paris Hilton">
 					
 					<label for="parishilton">Paris Hilton
 					</label>
@@ -37,11 +51,7 @@
 
 				<div id="georgebush">
 					
-					<img src="images/georgebush.png" alt="George Bush" />
-					
-					<br>
-
-					<input type="radio" name="people" id="georgeradio">
+					<input type="radio" name="people" id="georgeradio" value="George Bush">
 					
 					<label for="georgebush">George Bush 
 					</label>
@@ -50,16 +60,16 @@
 
 				<div id="bartsimpson">
 					
-					<img src="images/bartsimpson.png" alt="Bart Simpson" />
+					<input type="radio" name="people" id="bartradio" value="Bart Simpson">
 					
-					<br>
-
-					<input type="radio" name="people" id="bartradio">
-					
-					<label for="bartsimpson">
-						Bart Simpson
+					<label for="bartsimpson">Bart Simpson
 					</label>
 
+				</div>
+				<div id="count">
+					<h4>Questions Answered: <span id="answered">0</span></h4>
+					<h4>Questions Correct: <span id="correct">0</span></h4>
+					<h4>Questions Incorrect: <span id="incorrect">0</span></h4>
 				</div>
 				<button type="submit" id="submit">Submit</button>
 		</div>
@@ -68,13 +78,7 @@
 	
 	<div class="clear"></div>
 	<footer>
-		<button type="button" id="previous">
-			Previous
-		</button>
 
-		<button type="button"	id="next">
-			Next
-		</button>
 	</footer>
 </div>
 
@@ -82,7 +86,7 @@
 		JAVASCRIPT FILES
 	/!-->
 	<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main2.js"></script>
 
 </body>
 </html>

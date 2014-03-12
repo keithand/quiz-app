@@ -59,7 +59,7 @@ $(document).ready(function() {
 				$("#title").text("This is question " + question[qnum].num);
 				$("#quote q").text(question[qnum].quote);
 
-				if(nextQuestion >= 0) {
+				if(nextQuestion = 0) {
 					$("#title").text("Question #" + question[0].num);
 					$("#quote q").text(question[0].quote);
 					if (question[qnum].ans === true){
