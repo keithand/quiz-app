@@ -1,9 +1,10 @@
 $(document).ready(function() {
-	
+
 	// Expexted App Flow :
+	// 	1. Set variables for functionality and data
 
 
-//---------GLOBAL VARIABLES
+//---------FUNCTIONS AND VARIABLES
 
 var complete = false; // will become true after quiz is completed
 var score = 0;
@@ -42,35 +43,39 @@ var question = [
 		}
 	];
 
-	//DISPLAY CURRENT QUESTION//
+	// 	2. Functionality to display current question
+
 	function displayCurrentQuestion(qnum, question){
 		var currentQuestionData = question[qnum];
-		var userAnswer = $("input[type='radio']:checked").index("input[type='radio']");
-		$('#quest_num').text(currentQuestionData.num);
-		$('#quote q').text(currentQuestionData.quote)
-	};
+		$('h1').text(currentQuestionData.quote);
+
+	}
+
+	// 3. Check answer submitted by user vrs correct answer
 
 	function checkAnswer(qnum, question){
 		var currentQuestionData = question[qnum];
 		var userAnswer = $("input[type='radio']:checked").index("input[type='radio']");
+		
+		if ( userAnswer == currentQuestionData.correct ){
+			alert('well done!');
+			qnum++;
+			// Add call to clear out 
+			displayCurrentQuestion(qnum, question);
 
-		if (userAnswer == currentQuestionData.correct){
-			alert("Good job!");
-			qnum++;
-			correctAnswer++;
-			$("#correct").text(correctAnswer);
 		} else {
-			alert("Youre wrong.");
-			qnum++;
-			wrongAnswer++;
-			$("#incorrect").text(wrongAnswer);
+			alert('wrong! please try again');
 
 		}
 	}
 
-	//EVENT HANDLER FOR SUBMIT BUTTON
+
+
+	// 4. Bind handlers to elements 
 	$('#submit').on('click', checkAnswer(qnum, question) );
 
-	displayCurrentQuestion(qnum, question);
 
+	// 5. Initialize quiz
+	displayCurrentQuestion(qnum, question);
+	
 });
