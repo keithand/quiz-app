@@ -43,34 +43,32 @@ var question = [
 	];
 
 	//DISPLAY CURRENT QUESTION//
-	function displayCurrentQuestion(qnum, question){
+	 displayCurrentQuestion = function (qnum, question){
 		var currentQuestionData = question[qnum];
 		var userAnswer = $("input[type='radio']:checked").index("input[type='radio']");
 		$('#quest_num').text(currentQuestionData.num);
-		$('#quote q').text(currentQuestionData.quote)
+		$('#quote q').text(currentQuestionData.quote);
 	};
 
-	function checkAnswer(qnum, question){
 		var currentQuestionData = question[qnum];
 		var userAnswer = $("input[type='radio']:checked").index("input[type='radio']");
-
-		if (userAnswer == currentQuestionData.correct){
-			alert("Good job!");
+		
+		//EVENT HANDLER FOR SUBMIT BUTTON
+		$('#submit').on('click', function(qnum, question){ 
+		
+				if ( userAnswer == currentQuestionData.correct){
+					alert("Good job!");
+					correctAnswer++;
+					$("#correct").text(correctAnswer);
+				} else {
+					alert("Youre wrong.");
+					wrongAnswer++;
+					$("#incorrect").text(wrongAnswer);
+				}
 			qnum++;
-			correctAnswer++;
-			$("#correct").text(correctAnswer);
-		} else {
-			alert("Youre wrong.");
-			qnum++;
-			wrongAnswer++;
-			$("#incorrect").text(wrongAnswer);
+			displayCurrentQuestion(qnum, question);
 
-		}
-	}
+		});
 
-	//EVENT HANDLER FOR SUBMIT BUTTON
-	$('#submit').on('click', checkAnswer(qnum, question) );
-
-	displayCurrentQuestion(qnum, question);
 
 });
